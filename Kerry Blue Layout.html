@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kerry Blue Terrier Layout </title>
+    <link rel = "stylesheet" type = "text/css" href = "KerryBlueLayout.css"/>
+
+    <script>
+        function buttonClickActions(imgName, displayName,buttonName){
+           let button = document.getElementById(buttonName);
+           let imageDisplay = document.getElementById(displayName);
+           button.classList.toggle("buttonClicked");
+           if (button.classList.contains("buttonClicked")){
+               imageDisplay.src = imgName;
+           }
+           else{
+               imageDisplay.src = 'StartingPic.png';
+           }
+        }
+    </script>
+</head>
+<body>
+
+<p class = "pTitle" align = "center"> <strong>Please click on one of the buttons to display a part of the Kerry Blue Terrier anatomy. </strong></p>
+
+
+<div class = "image-container">
+<img src = "StartingPic.png" id = "imageDisplay1" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay2" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay3" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay4" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay5" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay6" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay7" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay8" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay9" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay10" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay11" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay12" class = "img">
+<img src = "StartingPic.png" id = "imageDisplay13" class = "img">
+</div>
+
+
+<div class = "buttonsContainerRight">
+    <button id = "1" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 9.png','imageDisplay1','1')"><strong>Layer 9</strong></button>
+    <button id = "2" class = "buttonUnclicked" onclick = "buttonClickActions('Body Bones.png','imageDisplay2','2' )"><strong>Body Bones</strong></button>
+    <button id = "3" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 1.png','imageDisplay3','3')"><strong>Layer 1</strong></button>
+    <button id = "4" class = "buttonUnclicked" onclick = "buttonClickActions('Leg Bones.png','imageDisplay4','4')"><strong>Leg Bones</strong></button>
+    <button id = "5" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 2.png','imageDisplay5','5')"><strong>Layer 2</strong></button>
+</div>
+
+<div class = "buttonsContainerLeft">
+    <button id = "6" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 3.png','imageDisplay6','6')"><strong>Layer 3</strong></button>
+    <button id = "7" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 4.png','imageDisplay7','7' )"><strong>Layer 4</strong></button>
+    <button id = "8" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 5.png','imageDisplay8','8')"><strong>Layer 5</strong></button>
+    <button id = "9" class = "buttonUnclicked " onclick = "buttonClickActions('Layer 6.png','imageDisplay9','9')"><strong>Layer 6</strong></button>
+    <button id = "10" class = "buttonUnclicked" onclick = "buttonClickActions('Layer 7.png','imageDisplay10','10')"><strong>Layer 7</strong></button>
+</div>
+
+<div class = "buttonsContainerDown" >
+    <button  id = "11" class = "buttonUnclicked buttonUnblocked" onclick = "buttonClickActions('Layer 8.png','imageDisplay11','11')"><strong>Layer 8</strong></button>
+    <button  id = "12" class = "buttonUnclicked buttonUnblocked" onclick = "buttonClickActions('Layer 10.png','imageDisplay12','12')"><strong>Layer 10</strong></button>
+    <button  id = "13" class = "buttonUnclicked buttonUnblocked" onclick = "buttonClickActions('Layer 11.png','imageDisplay13','13')"><strong>Layer 11</strong></button>
+</div>
+
+
+</body>
+
+</html>
