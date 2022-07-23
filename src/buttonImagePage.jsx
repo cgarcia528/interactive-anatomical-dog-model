@@ -5,7 +5,7 @@ import StartingPic from "./images/startingpic.png";
 
 class ButtonImagePage extends Component {
   state = {
-    buttons: Array(3).fill(false),
+    buttons: Array(ButtonImageContainer.length).fill(false),
   };
 
   handleClick = (event) => {
@@ -32,7 +32,6 @@ class ButtonImagePage extends Component {
               <button
                 key={(index + 1).toString()}
                 className="btn btn-primary btn-s"
-                buttonName="LayerX"
                 value={index.toString()}
                 onClick={this.handleClick}
               >
@@ -51,9 +50,11 @@ class ButtonImagePage extends Component {
 
           {ButtonImageContainer.map((object, index) => (
             <img
+              key={index.toString()}
               src={
-                !!this.state.buttons[index] &&
-                ButtonImageContainer[index].imageName
+                this.state.buttons[index]
+                  ? ButtonImageContainer[index].imageName
+                  : undefined
               }
               className="opacity-50 img layered-img"
             ></img>
