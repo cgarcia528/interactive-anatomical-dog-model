@@ -1,0 +1,23 @@
+.layered-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  opacity: 0.5;
+  filter: alpha(opacity = 50);
+  max-width: 50%;
+  max-height: 50%;
+}
+.starting-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  filter: alpha(opacity = 50);
+  max-width: 50%;
+  max-height: 50%;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+}
