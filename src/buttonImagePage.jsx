@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import ButtonGroup from "react-bootstrap/esm/ButtonGroup";
+import ButtonPanel from "./ButtonPanel";
 import { ButtonImageContainer } from "./images/ButtonImageContainer";
-import StartingPic from "./images/startingpic.png";
+import ImagePanel from "./ImagePanel";
 
 class ButtonImagePage extends Component {
   state = {
-    buttons: Array(ButtonImageContainer.length).fill(false),
+    buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
   };
 
   handleClick = (event) => {
-    const newButtons = this.state.buttons.slice();
+    const newButtons = this.state.buttonSelectedState.slice();
     newButtons[Number.parseInt(event.target.value, 10)] =
       !newButtons[Number.parseInt(event.target.value, 10)];
-    this.setState({ buttons: newButtons });
+    this.setState({ buttonSelectedState: newButtons });
   };
 
   render() {
@@ -26,42 +26,19 @@ class ButtonImagePage extends Component {
           </strong>
         </p>
 
-        <div className="position-absolute mid-left">
-          <ButtonGroup vertical>
-            {this.state.buttons.map((buttonObject, index) => (
-              <button
-                key={(index + 1).toString()}
-                className="btn btn-primary btn-s"
-                value={index.toString()}
-                onClick={this.handleClick}
-              >
-                {ButtonImageContainer[index].buttonName}
-              </button>
-            ))}
-          </ButtonGroup>
-        </div>
+        <ButtonPanel
+          buttonNameArray={ButtonImageContainer}
+          buttonStateArray={this.state.buttonSelectedState}
+          handleButtons={this.handleClick}
+        ></ButtonPanel>
 
-        <div className="image-container">
-          <img
-            src={StartingPic}
-            className="visible starting-img"
-            alt="string"
-          ></img>
-
-          {ButtonImageContainer.map((object, index) => (
-            <img
-              key={index.toString()}
-              src={
-                this.state.buttons[index]
-                  ? ButtonImageContainer[index].imageName
-                  : undefined
-              }
-              className="opacity-50 img layered-img"
-            ></img>
-          ))}
-        </div>
+        <ImagePanel
+          imageNameArray={ButtonImageContainer}
+          buttonsArray={this.state.buttonSelectedState}
+        ></ImagePanel>
       </div>
     );
   }
 }
+
 export default ButtonImagePage;
