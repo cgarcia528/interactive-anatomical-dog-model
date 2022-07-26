@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ButtonPanel from "./ButtonPanel";
 import { ButtonImageContainer } from "./images/ButtonImageContainer";
 import ImagePanel from "./ImagePanel";
+import TextPanel from "./TextPanel";
 
 class ButtonImagePage extends Component {
   state = {
@@ -36,6 +37,8 @@ class ButtonImagePage extends Component {
           imageNameArray={ButtonImageContainer}
           buttonsArray={this.state.buttonSelectedState}
         ></ImagePanel>
+
+        <TextPanel></TextPanel>
       </div>
     );
   }
