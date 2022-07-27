@@ -7,13 +7,22 @@ import TextPanel from "./TextPanel";
 class ButtonImagePage extends Component {
   state = {
     buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
+    mostRecentButton: null,
   };
 
   handleClick = (event) => {
+    const selectedButtonIndex = Number.parseInt(event.target.value, 10);
     const newButtons = this.state.buttonSelectedState.slice();
-    newButtons[Number.parseInt(event.target.value, 10)] =
-      !newButtons[Number.parseInt(event.target.value, 10)];
-    this.setState({ buttonSelectedState: newButtons });
+    let recentButton;
+    newButtons[selectedButtonIndex] = !newButtons[selectedButtonIndex];
+    newButtons.includes(true)
+      ? (recentButton = selectedButtonIndex)
+      : (recentButton = null);
+
+    this.setState({
+      buttonSelectedState: newButtons,
+      mostRecentButton: recentButton,
+    });
   };
 
   render() {
@@ -38,7 +47,11 @@ class ButtonImagePage extends Component {
           buttonsArray={this.state.buttonSelectedState}
         ></ImagePanel>
 
-        <TextPanel></TextPanel>
+        <TextPanel
+          textFieldArray={ButtonImageContainer}
+          recentlySelected={this.state.mostRecentButton}
+          buttonStateArray={this.state.buttonSelectedState}
+        ></TextPanel>
       </div>
     );
   }
