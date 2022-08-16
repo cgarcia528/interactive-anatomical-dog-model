@@ -16,7 +16,7 @@ class ButtonImagePage extends Component {
     let recentButton;
     newButtons[selectedButtonIndex] = !newButtons[selectedButtonIndex];
     newButtons.includes(true)
-      ? (recentButton = selectedButtonIndex)
+      ? (recentButton = newButtons.lastIndexOf(true))
       : (recentButton = null);
 
     this.setState({
@@ -28,11 +28,10 @@ class ButtonImagePage extends Component {
   render() {
     return (
       <div>
-        <p className="pTitle" align="center">
+        <p className="pTitle p1" align="center" style={{ fontSize: "18px" }}>
           {" "}
           <strong>
-            Please click on one of the buttons to display a part of the Kerry
-            Blue Terrier anatomy.{" "}
+            Please click on the buttons to display parts of the dog anatomy.{" "}
           </strong>
         </p>
 
