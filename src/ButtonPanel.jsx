@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ButtonGroup from "react-bootstrap/esm/ButtonGroup";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 
 class ButtonPanel extends Component {
@@ -10,12 +9,10 @@ class ButtonPanel extends Component {
           {this.props.buttonNameArray.map((buttonObject, index) => (
             <button
               key={index.toString()}
-              className={
-                "btn btn-primary btn-s mb-2 "
-                // + (this.props.buttonSelectedState ? "active" : "")
-              }
+              className={"btn btn-primary btn-s mb-2"}
               value={index.toString()}
               onClick={this.props.handleButtons}
+              style={{ fontSize: "18px" }}
             >
               {this.props.buttonNameArray[index].buttonName}
             </button>
