@@ -156,11 +156,11 @@ export const ButtonImageContainer = [
   //   imageName: layer4,
   //   textField: textFields[3].text,
   // },
-  // {
-  //   buttonName: "Muscles (500s)",
-  //   imageName: layer5,
-  //   textField: textFields[4].text,
-  // },
+  {
+    buttonName: "Muscles (500s)",
+    imageName: layer5,
+    textField: textFields[4].text,
+  },
   {
     buttonName: "Muscles (600s)",
     imageName: dogsvg,
