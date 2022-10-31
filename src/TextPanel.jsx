@@ -15,6 +15,7 @@ class TextPanel extends Component {
           <h5 className="card-title">Panel title</h5>
           <h6 className="card-subtitle mb-2 text-light">Panel subtitle</h6>
           <p className="card-text center">
+            {/*If any button is activated, then the text panel should display the current image's text*/}
             {this.props.buttonStateArray.includes(true)
               ? this.props.textFieldArray[this.props.recentlySelected].textField
               : fallbackText}
