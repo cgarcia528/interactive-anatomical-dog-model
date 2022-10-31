@@ -29,3 +29,19 @@
 .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(216, 8, 8, 0.5) !important;
 } */
+
+.full-group:focus path {
+  cursor: pointer;
+  fill: blue;
+  fill-opacity: 0.25;
+}
+
+.full-group:hover path {
+  cursor: pointer;
+  fill: blue;
+  fill-opacity: 0.25;
+}
+
+.full-group {
+  fill-opacity: 0;
+}
