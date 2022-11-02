@@ -2,18 +2,13 @@ import React, { Component } from "react";
 import StartingPic from "./images/startingpic.png";
 import "./App.css";
 
-function handleHover(e, jsonFile) {
-  const found = jsonFile[0].array.find((element) => {
-    return element.id === e.target.id;
-  });
-  console.log(found.bodyName);
-  console.log(found.action);
-}
+
 
 class ImagePanel extends Component {
   render() {  
     const { 
       mostRecentContainer,
+      parentFunction
   } = this.props;
     return (
       <div className="image-container">
@@ -38,7 +33,7 @@ class ImagePanel extends Component {
                 id={el.id}
                 key={el.id}
                 d={el.path}
-                onMouseEnter={(e) => handleHover(e,mostRecentContainer.textField)}
+                onMouseEnter={(e) => parentFunction(e)}
               />
             </g>
           ))}

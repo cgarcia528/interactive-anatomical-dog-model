@@ -12,6 +12,23 @@ class ButtonImagePage extends Component {
     mostRecentContainer: ButtonImageContainer[0]
   };
 
+  /** 
+ * Name: handleHover
+ * Use: When a g path is hovered, it's id corresponding to the dog bodypart (101,102...)
+ *      is passed to the function along with the json file corresponding to the current image.
+ *      The function loops through all the json objects to find the correct one with all the 
+ *      text information and returns it to display for the text panel.
+ * **/
+ onHover = (e) => {
+  const mostRecentContainerText = this.state.mostRecentContainer.textField;
+  const found = mostRecentContainerText[0].array.find((element) => {
+    return element.id === e.target.id;
+  });
+
+  console.log(found.bodyName); //This is panel title
+  console.log(found.action); //this is panel text
+  console.log(found.id); //this is panel subtitle
+}
   containerLookup(buttonIndexId){
     return ButtonImageContainer[buttonIndexId];
   }
@@ -73,6 +90,7 @@ class ButtonImagePage extends Component {
           // imageNameArray={this.state.buttonSelectedState}
           mostRecentContainer = {this.state.mostRecentContainer}
           mostRecentButton = {this.state.mostRecentButton}
+          parentFunction = {this.onHover}
         ></ImagePanel>
 
         <TextPanel
