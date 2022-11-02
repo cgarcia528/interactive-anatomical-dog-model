@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import StartingPic from "./images/startingpic.png";
 import "./App.css";
-import imageImport, {OneHundredsPic, SixHundredsPic } from './images/imageImport';
-import jsonImport, { OneHundreds,SixHundreds } from './json/jsonImport';
 
-function handleHover(e) {
-  const found = SixHundreds[0].array.find((element) => {
+function handleHover(e, jsonFile) {
+  const found = jsonFile[0].array.find((element) => {
     return element.id === e.target.id;
   });
   console.log(found.bodyName);
@@ -13,7 +11,10 @@ function handleHover(e) {
 }
 
 class ImagePanel extends Component {
-  render() {
+  render() {  
+    const { 
+      mostRecentContainer,
+  } = this.props;
     return (
       <div className="image-container">
       <svg
@@ -28,16 +29,16 @@ class ImagePanel extends Component {
           // width="4204"
           // height="3294"
           preserveAspectRatio="none"
-          xlinkHref={SixHundredsPic}
+          xlinkHref={mostRecentContainer.imageName}
         />
         <g>
-          {SixHundreds[0].array.map((el) => (
+          {mostRecentContainer.textField[0].array.map((el) => (
             <g key={el.id} className="full-group">
               <path
                 id={el.id}
                 key={el.id}
                 d={el.path}
-                onMouseEnter={handleHover}
+                onMouseEnter={(e) => handleHover(e,mostRecentContainer.textField)}
               />
             </g>
           ))}
