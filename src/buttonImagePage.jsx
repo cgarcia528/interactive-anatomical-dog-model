@@ -9,7 +9,8 @@ class ButtonImagePage extends Component {
     // buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
     // mostRecentButton: null,
     mostRecentButton: 0,
-    mostRecentContainer: ButtonImageContainer[0]
+    mostRecentContainer: ButtonImageContainer[0],
+    panelDisplay: null
   };
 
   /** 
@@ -24,10 +25,14 @@ class ButtonImagePage extends Component {
   const found = mostRecentContainerText[0].array.find((element) => {
     return element.id === e.target.id;
   });
-
-  console.log(found.bodyName); //This is panel title
-  console.log(found.action); //this is panel text
-  console.log(found.id); //this is panel subtitle
+  let newState = Object.assign({},this.state);
+  newState.panelDisplay = found;
+  this.setState(newState);
+  // const objectInfo = {bodyName: found.bodyName, action: found.action, id: found.id}
+  // return objectInfo;
+  // console.log(found.bodyName); //This is panel title
+  // console.log(found.action); //this is panel text
+  // console.log(found.id); //this is panel subtitle
 }
   containerLookup(buttonIndexId){
     return ButtonImageContainer[buttonIndexId];
@@ -35,7 +40,6 @@ class ButtonImagePage extends Component {
 
   handleClick = (event) => {
     const selectedButtonIndex = Number.parseInt(event.target.value, 10);
-    console.log(selectedButtonIndex);
     // const newButtons = this.state.buttonSelectedState.slice();
     let recentButton;
     let newContainer;
@@ -97,6 +101,8 @@ class ButtonImagePage extends Component {
           textFieldArray={ButtonImageContainer}
           recentlySelected={this.state.mostRecentButton}
           mostRecentContainer = {this.state.mostRecentContainer}
+          panelDisplayInfo = {this.state.panelDisplay}
+          //TODO: Get the found data object to then display hover info
           // buttonStateArray={this.state.buttonSelectedState}
         ></TextPanel>
       </div>
