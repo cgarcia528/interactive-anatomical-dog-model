@@ -6,22 +6,33 @@ import TextPanel from "./TextPanel";
 
 class ButtonImagePage extends Component {
   state = {
-    buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
-    mostRecentButton: null,
+    // buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
+    // mostRecentButton: null,
+    mostRecentButton: 0,
+    mostRecentContainer: ButtonImageContainer[0]
   };
+
+  containerLookup(buttonIndexId){
+    return ButtonImageContainer[buttonIndexId];
+  }
 
   handleClick = (event) => {
     const selectedButtonIndex = Number.parseInt(event.target.value, 10);
-    const newButtons = this.state.buttonSelectedState.slice();
+    console.log(selectedButtonIndex);
+    // const newButtons = this.state.buttonSelectedState.slice();
     let recentButton;
-    newButtons[selectedButtonIndex] = !newButtons[selectedButtonIndex];
-    newButtons.includes(true)
-      ? (recentButton = newButtons.lastIndexOf(true))
-      : (recentButton = null);
+    let newContainer;
+    // newButtons[selectedButtonIndex] = !newButtons[selectedButtonIndex];
+    // newButtons.includes(true)
+    //   ? (recentButton = newButtons.lastIndexOf(true))
+    //   : (recentButton = null);
+    recentButton = selectedButtonIndex;
+    newContainer = this.containerLookup(selectedButtonIndex);
 
     this.setState({
-      buttonSelectedState: newButtons,
+      // buttonSelectedState: newButtons,
       mostRecentButton: recentButton,
+      mostRecentContainer: newContainer,
     });
   };
 
@@ -51,19 +62,24 @@ class ButtonImagePage extends Component {
 
         <ButtonPanel
           buttonNameArray={ButtonImageContainer}
-          buttonStateArray={this.state.buttonSelectedState}
+          // buttonStateArray={this.state.buttonSelectedState}
+          mostRecentButton = {this.state.mostRecentButton}
+          mostRecentContainer = {this.state.mostRecentContainer}
           handleButtons={this.handleClick}
         ></ButtonPanel>
 
         <ImagePanel
           imageNameArray={ButtonImageContainer}
-          buttonsArray={this.state.buttonSelectedState}
+          // imageNameArray={this.state.buttonSelectedState}
+          mostRecentContainer = {this.state.mostRecentContainer}
+          mostRecentButton = {this.state.mostRecentButton}
         ></ImagePanel>
 
         <TextPanel
           textFieldArray={ButtonImageContainer}
           recentlySelected={this.state.mostRecentButton}
-          buttonStateArray={this.state.buttonSelectedState}
+          mostRecentContainer = {this.state.mostRecentContainer}
+          // buttonStateArray={this.state.buttonSelectedState}
         ></TextPanel>
       </div>
     );
