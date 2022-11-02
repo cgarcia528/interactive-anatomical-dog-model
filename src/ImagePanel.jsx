@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import StartingPic from "./images/startingpic.png";
 import "./App.css";
-import imageImport, { SixHundredsPic } from './images/imageImport';
-import jsonImport, { SixHundreds } from './json/jsonImport';
+import imageImport, {OneHundredsPic, SixHundredsPic } from './images/imageImport';
+import jsonImport, { OneHundreds,SixHundreds } from './json/jsonImport';
 
 function handleHover(e) {
-  const found = SixHundreds.find((element) => {
+  const found = SixHundreds[0].array.find((element) => {
     return element.id === e.target.id;
   });
   console.log(found.bodyName);
@@ -31,7 +31,7 @@ class ImagePanel extends Component {
           xlinkHref={SixHundredsPic}
         />
         <g>
-          {SixHundreds.map((el) => (
+          {SixHundreds[0].array.map((el) => (
             <g key={el.id} className="full-group">
               <path
                 id={el.id}
