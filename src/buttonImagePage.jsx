@@ -34,6 +34,12 @@ class ButtonImagePage extends Component {
   // console.log(found.action); //this is panel text
   // console.log(found.id); //this is panel subtitle
 }
+
+onLeave =() =>{
+  let newState = Object.assign({},this.state);
+  newState.panelDisplay = null;
+  this.setState(newState);
+}
   containerLookup(buttonIndexId){
     return ButtonImageContainer[buttonIndexId];
   }
@@ -94,7 +100,8 @@ class ButtonImagePage extends Component {
           // imageNameArray={this.state.buttonSelectedState}
           mostRecentContainer = {this.state.mostRecentContainer}
           mostRecentButton = {this.state.mostRecentButton}
-          parentFunction = {this.onHover}
+          onEnter = {this.onHover}
+          onLeave = {this.onLeave}
         ></ImagePanel>
 
         <TextPanel

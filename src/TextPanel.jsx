@@ -8,10 +8,10 @@ class TextPanel extends Component {
   } = this.props;
     return (
       <div
-        className="card bg-primary text-light w-25 h-50"
-        style={{
-          float: "right",
-        }}
+        className="card bg-primary text-light w-25 h-50 position-absolute top-0 end-0"
+        // style={{
+        //   float: "right",
+        // }}
       >
         <div className="card-body">
           <h5 className="card-title">{panelDisplayInfo!=null?panelDisplayInfo.bodyName:mostRecentContainer.textField[0].fallbackText}</h5>

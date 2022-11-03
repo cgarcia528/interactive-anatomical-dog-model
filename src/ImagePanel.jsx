@@ -8,7 +8,9 @@ class ImagePanel extends Component {
   render() {  
     const { 
       mostRecentContainer,
-      parentFunction
+      parentFunction,
+      onEnter,
+      onLeave
   } = this.props;
     return (
       <div className="image-container">
@@ -33,7 +35,8 @@ class ImagePanel extends Component {
                 id={el.id}
                 key={el.id}
                 d={el.path}
-                onMouseEnter={(e) => parentFunction(e)}
+                onMouseEnter={(e) => onEnter(e)}
+                onMouseLeave={onLeave}
               />
             </g>
           ))}
