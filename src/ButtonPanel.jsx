@@ -3,18 +3,22 @@ import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 
 class ButtonPanel extends Component {
   render() {
+    const { 
+      buttonNameArray,
+      handleButtons
+  } = this.props;
     return (
       <div className="position-absolute mid-left">
         <ButtonToolbar className="btn-group-vertical">
-          {this.props.buttonNameArray.map((buttonObject, index) => (
+          {buttonNameArray.map((index) => (
             <button
               key={index.toString()}
               className={"btn btn-primary btn-s mb-2"}
               value={index.toString()}
-              onClick={this.props.handleButtons}
+              onClick={handleButtons}
               style={{ fontSize: "18px" }}
             >
-              {this.props.buttonNameArray[index].buttonName}
+              {buttonNameArray[index].buttonName}
             </button>
           ))}
         </ButtonToolbar>

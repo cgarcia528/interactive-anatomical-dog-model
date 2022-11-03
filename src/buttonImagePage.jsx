@@ -6,58 +6,64 @@ import TextPanel from "./TextPanel";
 
 class ButtonImagePage extends Component {
   state = {
-    // buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
-    // mostRecentButton: null,
     mostRecentButton: 0,
     mostRecentContainer: ButtonImageContainer[0],
-    panelDisplay: null
+    panelDisplay: null,
   };
 
-  /** 
- * Name: handleHover
- * Use: When a g path is hovered, it's id corresponding to the dog bodypart (101,102...)
- *      is passed to the function along with the json file corresponding to the current image.
- *      The function loops through all the json objects to find the correct one with all the 
- *      text information and returns it to display for the text panel.
- * **/
- onHover = (e) => {
-  const mostRecentContainerText = this.state.mostRecentContainer.textField;
-  const found = mostRecentContainerText[0].array.find((element) => {
-    return element.id === e.target.id;
-  });
-  let newState = Object.assign({},this.state);
-  newState.panelDisplay = found;
-  this.setState(newState);
-  // const objectInfo = {bodyName: found.bodyName, action: found.action, id: found.id}
-  // return objectInfo;
-  // console.log(found.bodyName); //This is panel title
-  // console.log(found.action); //this is panel text
-  // console.log(found.id); //this is panel subtitle
-}
+  /**
+   * Name: onHover
+   * Use: When a g path is hovered in an svg, it's id corresponding to the dog bodypart (101,102...)
+   *      is passed to the function through the event variable.
+   *      The function loops through all the svg objects in the json to find the correct one with all the
+   *      text information for the text panel and sets it as a state variable.
+   * **/
+  onHover = (e) => {
+    const mostRecentContainerText = this.state.mostRecentContainer.textField;
+    const found = mostRecentContainerText[0].array.find((element) => {
+      return element.id === e.target.id;
+    });
+    let newState = Object.assign({}, this.state);
+    newState.panelDisplay = found;
+    this.setState(newState);
+  };
 
-onLeave =() =>{
-  let newState = Object.assign({},this.state);
-  newState.panelDisplay = null;
-  this.setState(newState);
-}
-  containerLookup(buttonIndexId){
+  /**
+   * Name: onLeave
+   * Use: When a g path is hovered away from, the panel display variable is set to null.
+   *      The text panel will later see the variable as null and instead display fallback
+   *      text for that particular image.
+   * **/
+  onLeave = () => {
+    let newState = Object.assign({}, this.state);
+    newState.panelDisplay = null;
+    this.setState(newState);
+  };
+
+  /**
+   * Name: containerLookup
+   * Use: Simple function that uses a selected button's current index value to find
+   *      a button image container. This is used to label the buttons with their
+   *      corresponding names.
+   * **/
+  containerLookup(buttonIndexId) {
     return ButtonImageContainer[buttonIndexId];
   }
 
-  handleClick = (event) => {
+  /**
+   * Name: handleButtonClick
+   * Use: A button handler function which fetches the target value of the button
+   *      which also happens to be the button's index in the ButtonImageContainer array(0,1,2...).
+   *      This is used to keep track of the most recent button selected and the new info container
+   *      which contains the button name, new image/svg name, and the new json file that will populate
+   *      the text panel's text fields.
+   * **/
+  handleButtonClick = (event) => {
     const selectedButtonIndex = Number.parseInt(event.target.value, 10);
-    // const newButtons = this.state.buttonSelectedState.slice();
-    let recentButton;
-    let newContainer;
-    // newButtons[selectedButtonIndex] = !newButtons[selectedButtonIndex];
-    // newButtons.includes(true)
-    //   ? (recentButton = newButtons.lastIndexOf(true))
-    //   : (recentButton = null);
-    recentButton = selectedButtonIndex;
-    newContainer = this.containerLookup(selectedButtonIndex);
+    let recentButton = selectedButtonIndex;
+    let newContainer = this.containerLookup(selectedButtonIndex);
 
     this.setState({
-      // buttonSelectedState: newButtons,
       mostRecentButton: recentButton,
       mostRecentContainer: newContainer,
     });
@@ -89,28 +95,18 @@ onLeave =() =>{
 
         <ButtonPanel
           buttonNameArray={ButtonImageContainer}
-          // buttonStateArray={this.state.buttonSelectedState}
-          mostRecentButton = {this.state.mostRecentButton}
-          mostRecentContainer = {this.state.mostRecentContainer}
-          handleButtons={this.handleClick}
+          handleButtons={this.handleButtonClick}
         ></ButtonPanel>
 
         <ImagePanel
-          imageNameArray={ButtonImageContainer}
-          // imageNameArray={this.state.buttonSelectedState}
-          mostRecentContainer = {this.state.mostRecentContainer}
-          mostRecentButton = {this.state.mostRecentButton}
-          onEnter = {this.onHover}
-          onLeave = {this.onLeave}
+          mostRecentContainer={this.state.mostRecentContainer}
+          onEnter={this.onHover}
+          onLeave={this.onLeave}
         ></ImagePanel>
 
         <TextPanel
-          textFieldArray={ButtonImageContainer}
-          recentlySelected={this.state.mostRecentButton}
-          mostRecentContainer = {this.state.mostRecentContainer}
-          panelDisplayInfo = {this.state.panelDisplay}
-          //TODO: Get the found data object to then display hover info
-          // buttonStateArray={this.state.buttonSelectedState}
+          mostRecentContainer={this.state.mostRecentContainer}
+          panelDisplayInfo={this.state.panelDisplay}
         ></TextPanel>
       </div>
     );

@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import StartingPic from "./images/startingpic.png";
 import "./App.css";
 
-
-
 class ImagePanel extends Component {
   render() {  
     const { 
       mostRecentContainer,
-      parentFunction,
       onEnter,
       onLeave
   } = this.props;
