@@ -3,10 +3,47 @@
     "fallbackText": "sixhundredstest?",
     "array": [
       {
+        "id": "601",
+        "bodyName": "Levator Nasolabialis",
+        "action": "opens nostrils, lifts upper lip.",
+        "path": ""
+      },
+      {
+        "id": "602",
+        "bodyName": "Orbicularis Oris",
+        "action": "closes lips, pulls nose down (sniffing), opens up nostrils.",
+        "path": ""
+      },
+      {
+        "id": "603",
+        "bodyName": "Mentalis",
+        "action": "stiffens the upper part of the lower lip.",
+        "path": ""
+      },
+      {
+        "id": "604",
+        "bodyName": "Sphincter Colli Superficialis",
+        "action": "supports the throat area.",
+        "path": ""
+      },
+      {
+        "id": "605",
+        "bodyName": "Sternocephalicus",
+        "action": "bilateral: flexes neck and head down \n unilateral: lateral flexion of neck.",
+        "path": ""
+      },
+      {
         "id": "606",
         "bodyName": "Cerviculoauricularis Superficialis",
         "action": "Raises ear",
         "path": "m1155 285.3 208.4 70.82 80.93 80.93-194.2 8.093-107.2-145.7z"
+      },
+
+      {
+        "id": "607",
+        "bodyName": "Platysma",
+        "action": "draws the corners of the lips back.",
+        "path": ""
       },
       {
         "id": "608",
