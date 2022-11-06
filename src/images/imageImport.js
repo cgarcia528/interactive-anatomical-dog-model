@@ -9,8 +9,10 @@ import EightHundredsPic from "./layer8.png";
 import NineHundredsPic from "./layer9.png";
 import OneThousandsPic from "./layer10.png";
 import OneHundredThousandsPic from "./layer11.png";
+import StartingPic from "./startingpic.png"
 
 export {
+    StartingPic,
     HundredsPic,
     TwoHundredsPic,
     ThreeHundredsPic,

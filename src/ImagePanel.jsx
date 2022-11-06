@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import StartingPic from "./images/startingpic.png";
+import { StartingPic } from "./images/imageImport";
 import "./App.css";
 
 class ImagePanel extends Component {
@@ -14,6 +14,13 @@ class ImagePanel extends Component {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           // className="image-container"
         >
+          <image
+            className="opacity-50 img layered-img"
+            // width="4204"
+            // height="3294"
+            preserveAspectRatio="none"
+            xlinkHref={StartingPic}
+          />
           <image
             className="opacity-50 img layered-img"
             // width="4204"
