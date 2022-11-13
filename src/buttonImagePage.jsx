@@ -6,6 +6,7 @@ import TextPanel from "./TextPanel";
 
 class ButtonImagePage extends Component {
   state = {
+    currentMode: "section",
     mostRecentButton: 0,
     mostRecentContainer: ButtonImageContainer[0],
     panelDisplay: null,
@@ -69,6 +70,18 @@ class ButtonImagePage extends Component {
     });
   };
 
+  onLayerMode = () => {
+    let newState = Object.assign({}, this.state);
+    newState.currentMode = "layer";
+    this.setState(newState);
+  };
+
+  onSectionMode = () => {
+    let newState = Object.assign({}, this.state);
+    newState.currentMode = "section";
+    this.setState(newState);
+  };
+
   render() {
     return (
       <div>
@@ -92,6 +105,9 @@ class ButtonImagePage extends Component {
           </svg>{" "}
           Print
         </button>
+
+        <button onClick={this.onSectionMode}>Section Mode</button>
+        <button onClick={this.onLayerMode}>Layered Mode</button>
 
         <ButtonPanel
           buttonNameArray={ButtonImageContainer}
