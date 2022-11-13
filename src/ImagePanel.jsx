@@ -21,29 +21,31 @@ class ImagePanel extends Component {
             preserveAspectRatio="none"
             xlinkHref={StartingPic}
           />
-          {currentMode == "section" && (
-            <image
-              className="opacity-50 img layered-img"
-              // width="4204"
-              // height="3294"
-              preserveAspectRatio="none"
-              xlinkHref={mostRecentContainer.imageName}
-            />
-          )}
           <g>
-            {/*We should only render svg hotspot areas if the current mode is section mode*/}
-            {currentMode == "section" &&
-              mostRecentContainer.textField[0].array.map((el) => (
-                <g key={el.id} className="full-group">
-                  <path
-                    id={el.id}
-                    key={el.id}
-                    d={el.path}
-                    onMouseEnter={(e) => onEnter(e)}
-                    onMouseLeave={onLeave}
-                  />
-                </g>
-              ))}
+            {/*We should only render svg hotspot areas and a single image if the current mode is section mode*/}
+            {currentMode == "section"
+              ? [
+                  <image
+                    className="opacity-50 img layered-img"
+                    // width="4204"
+                    // height="3294"
+                    preserveAspectRatio="none"
+                    xlinkHref={mostRecentContainer.imageName}
+                  />,
+
+                  mostRecentContainer.textField[0].array.map((el) => (
+                    <g key={el.id} className="full-group">
+                      <path
+                        id={el.id}
+                        key={el.id}
+                        d={el.path}
+                        onMouseEnter={(e) => onEnter(e)}
+                        onMouseLeave={onLeave}
+                      />
+                    </g>
+                  )),
+                ]
+              : null}
           </g>
         </svg>
       </div>
