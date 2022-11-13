@@ -79,6 +79,9 @@ class ButtonImagePage extends Component {
   onSectionMode = () => {
     let newState = Object.assign({}, this.state);
     newState.currentMode = "section";
+    newState.mostRecentButton = 0;
+    newState.mostRecentContainer = ButtonImageContainer[0];
+    newState.panelDisplay = null;
     this.setState(newState);
   };
 
