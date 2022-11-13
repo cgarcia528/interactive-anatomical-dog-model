@@ -116,6 +116,7 @@ class ButtonImagePage extends Component {
 
         <ImagePanel
           mostRecentContainer={this.state.mostRecentContainer}
+          currentMode={this.state.currentMode}
           onEnter={this.onHover}
           onLeave={this.onLeave}
         ></ImagePanel>

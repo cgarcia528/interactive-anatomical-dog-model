@@ -4,7 +4,7 @@ import "./App.css";
 
 class ImagePanel extends Component {
   render() {
-    const { mostRecentContainer, onEnter, onLeave } = this.props;
+    const { mostRecentContainer, onEnter, onLeave, currentMode } = this.props;
     return (
       <div className="image-container">
         <svg
@@ -29,17 +29,19 @@ class ImagePanel extends Component {
             xlinkHref={mostRecentContainer.imageName}
           />
           <g>
-            {mostRecentContainer.textField[0].array.map((el) => (
-              <g key={el.id} className="full-group">
-                <path
-                  id={el.id}
-                  key={el.id}
-                  d={el.path}
-                  onMouseEnter={(e) => onEnter(e)}
-                  onMouseLeave={onLeave}
-                />
-              </g>
-            ))}
+            {/*We should only render svg hotspot areas if the current mode is section mode*/}
+            {currentMode == "section" &&
+              mostRecentContainer.textField[0].array.map((el) => (
+                <g key={el.id} className="full-group">
+                  <path
+                    id={el.id}
+                    key={el.id}
+                    d={el.path}
+                    onMouseEnter={(e) => onEnter(e)}
+                    onMouseLeave={onLeave}
+                  />
+                </g>
+              ))}
           </g>
         </svg>
       </div>
