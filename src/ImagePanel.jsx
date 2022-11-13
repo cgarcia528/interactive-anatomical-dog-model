@@ -21,13 +21,15 @@ class ImagePanel extends Component {
             preserveAspectRatio="none"
             xlinkHref={StartingPic}
           />
-          <image
-            className="opacity-50 img layered-img"
-            // width="4204"
-            // height="3294"
-            preserveAspectRatio="none"
-            xlinkHref={mostRecentContainer.imageName}
-          />
+          {currentMode == "section" && (
+            <image
+              className="opacity-50 img layered-img"
+              // width="4204"
+              // height="3294"
+              preserveAspectRatio="none"
+              xlinkHref={mostRecentContainer.imageName}
+            />
+          )}
           <g>
             {/*We should only render svg hotspot areas if the current mode is section mode*/}
             {currentMode == "section" &&
