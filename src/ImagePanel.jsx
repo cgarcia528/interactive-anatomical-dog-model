@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import { StartingPic } from "./images/imageImport";
 import "./App.css";
+import { ButtonImageContainer } from "./images/ButtonImageContainer";
 
 class ImagePanel extends Component {
   render() {
-    const { mostRecentContainer, onEnter, onLeave, currentMode } = this.props;
+    const {
+      mostRecentContainer,
+      onEnter,
+      onLeave,
+      currentMode,
+      buttonSelectedState,
+    } = this.props;
     return (
       <div className="image-container">
         <svg
@@ -21,11 +28,27 @@ class ImagePanel extends Component {
             preserveAspectRatio="none"
             xlinkHref={StartingPic}
           />
+          {currentMode == "layer"
+            ? [
+                ButtonImageContainer.map((object, index) => (
+                  <img
+                    key={index.toString()}
+                    src={
+                      buttonSelectedState[index]
+                        ? ButtonImageContainer[index].imageName
+                        : undefined
+                    }
+                    className="opacity-50 img layered-img"
+                  ></img>
+                )),
+              ]
+            : null}
           <g>
             {/*We should only render svg hotspot areas and a single image if the current mode is section mode*/}
             {currentMode == "section"
               ? [
                   <image
+                    key={"section_active_image"}
                     className="opacity-50 img layered-img"
                     // width="4204"
                     // height="3294"

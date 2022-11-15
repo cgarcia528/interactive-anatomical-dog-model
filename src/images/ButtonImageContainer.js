@@ -1,21 +1,45 @@
-import imageImport, { EightHundredsPic, FiveHundredsPic, FourHundredsPic, HundredsPic, NineHundredsPic, OneHundredThousandsPic, OneThousandsPic, SevenHundredsPic, SixHundredsPic, ThreeHundredsPic, TwoHundredsPic } from '../images/imageImport';
-import JsonImport, { EightHundreds, FiveHundreds, FourHundreds, Hundreds, NineHundreds, OneHundredThousands, OneThousands, SevenHundreds, SixHundreds, ThreeHundreds, TwoHundreds } from '../json/jsonImport';
+import imageImport, {
+  EightHundredsPic,
+  FiveHundredsPic,
+  FourHundredsPic,
+  HundredsPic,
+  NineHundredsPic,
+  OneHundredThousandsPic,
+  OneThousandsPic,
+  SevenHundredsPic,
+  SixHundredsPic,
+  ThreeHundredsPic,
+  TwoHundredsPic,
+} from "../images/imageImport";
+import JsonImport, {
+  EightHundreds,
+  FiveHundreds,
+  FourHundreds,
+  Hundreds,
+  NineHundreds,
+  OneHundredThousands,
+  OneThousands,
+  SevenHundreds,
+  SixHundreds,
+  ThreeHundreds,
+  TwoHundreds,
+} from "../json/jsonImport";
 
 export const ButtonImageContainer = [
   {
     buttonName: "Muscles (100s)",
     imageName: HundredsPic,
-    textField: Hundreds
+    textField: Hundreds,
   },
   {
     buttonName: "Muscles (200s)",
     imageName: TwoHundredsPic,
-    textField: TwoHundreds
+    textField: TwoHundreds,
   },
   {
     buttonName: "Muscles (300s)",
     imageName: ThreeHundredsPic,
-    textField: ThreeHundreds
+    textField: ThreeHundreds,
   },
   {
     buttonName: "Muscles (400s)",

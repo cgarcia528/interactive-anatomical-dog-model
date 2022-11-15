@@ -6,10 +6,14 @@ import TextPanel from "./TextPanel";
 
 class ButtonImagePage extends Component {
   state = {
+    // The following section is beginnig values for section mode
     currentMode: "section",
     mostRecentButton: 0,
     mostRecentContainer: ButtonImageContainer[0],
     panelDisplay: null,
+    // The following section is beginning values for layer mode
+    buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
+    mostRecentButton: null,
   };
 
   /**
@@ -51,6 +55,32 @@ class ButtonImagePage extends Component {
     return ButtonImageContainer[buttonIndexId];
   }
 
+  setSectionModeButtonClickState(selectedButtonIndex) {
+    console.log("Resetting section state!");
+    let recentButton = selectedButtonIndex;
+    let newContainer = this.containerLookup(selectedButtonIndex);
+    this.setState({
+      mostRecentButton: recentButton,
+      mostRecentContainer: newContainer,
+    });
+  }
+
+  setLayerModeButtonClickState(selectedButtonIndex) {
+    console.log("Setting layer state!");
+    const newButtons = this.state.buttonSelectedState.slice();
+    let recentButton;
+    newButtons[selectedButtonIndex] = !newButtons[selectedButtonIndex];
+    newButtons.includes(true)
+      ? (recentButton = newButtons.lastIndexOf(true))
+      : (recentButton = null);
+    console.log("New array of buttons selected is: " + newButtons);
+
+    this.setState({
+      buttonSelectedState: newButtons,
+      mostRecentButton: recentButton,
+    });
+  }
+
   /**
    * Name: handleButtonClick
    * Use: A button handler function which fetches the target value of the button
@@ -61,18 +91,21 @@ class ButtonImagePage extends Component {
    * **/
   handleButtonClick = (event) => {
     const selectedButtonIndex = Number.parseInt(event.target.value, 10);
-    let recentButton = selectedButtonIndex;
-    let newContainer = this.containerLookup(selectedButtonIndex);
-
-    this.setState({
-      mostRecentButton: recentButton,
-      mostRecentContainer: newContainer,
-    });
+    const currentMode = this.state.currentMode;
+    if (currentMode == "section") {
+      this.setSectionModeButtonClickState(selectedButtonIndex);
+    } else if (currentMode == "layer") {
+      this.setLayerModeButtonClickState(selectedButtonIndex);
+    }
   };
 
   onLayerMode = () => {
     let newState = Object.assign({}, this.state);
     newState.currentMode = "layer";
+    newState.buttonSelectedState = Array(ButtonImageContainer.length).fill(
+      false
+    );
+    newState.mostRecentButton = null;
     this.setState(newState);
   };
 
@@ -119,6 +152,7 @@ class ButtonImagePage extends Component {
 
         <ImagePanel
           mostRecentContainer={this.state.mostRecentContainer}
+          buttonSelectedState={this.state.buttonSelectedState}
           currentMode={this.state.currentMode}
           onEnter={this.onHover}
           onLeave={this.onLeave}
