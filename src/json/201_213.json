@@ -6,79 +6,79 @@
         "id": "201",
         "bodyName": "Temporalis",
         "action": "raises mandible to close mouth.",
-        "path": ""
+        "path": "m863.44 298.2a51.925 40.056 0 0 1-51.925 40.056 51.925 40.056 0 0 1-51.925-40.056 51.925 40.056 0 0 1 51.925-40.056 51.925 40.056 0 0 1 51.925 40.056z"
       },
       {
         "id": "202",
         "bodyName": "Digastricus",
         "action": "opens the mouth",
-        "path": ""
+        "path": "m910.91 921.3a44.507 43.024 0 0 1-44.507 43.024 44.507 43.024 0 0 1-44.507-43.024 44.507 43.024 0 0 1 44.507-43.024 44.507 43.024 0 0 1 44.507 43.024z"
       },
       {
         "id": "203",
         "bodyName": "Stylohyoideus",
         "action": "raises basihyoid bone, aids in swallowing.",
-        "path": ""
+        "path": "m996.96 953.94a51.925 43.024 0 0 1-51.925 43.024 51.925 43.024 0 0 1-51.925-43.024 51.925 43.024 0 0 1 51.925-43.024 51.925 43.024 0 0 1 51.925 43.024z"
       },
       {
         "id": "204",
         "bodyName": "Obliquus Capitis Cranialis",
         "action": "extends atlanto-occipital joint.",
-        "path": ""
+        "path": "m1439.1 267.04a59.343 44.507 0 0 1-59.343 44.507 59.343 44.507 0 0 1-59.343-44.507 59.343 44.507 0 0 1 59.343-44.507 59.343 44.507 0 0 1 59.343 44.507z"
       },
       {
         "id": "205",
         "bodyName": "Obliquus Capitis Caudalis",
         "action": "bilateral: fixation of the head. \n unilateral: rotation of the head (on atlas).",
-        "path": ""
+        "path": "m1548.9 360.51a68.244 48.958 0 0 1-68.244 48.958 68.244 48.958 0 0 1-68.244-48.958 68.244 48.958 0 0 1 68.244-48.958 68.244 48.958 0 0 1 68.244 48.958z"
       },
       {
         "id": "206",
         "bodyName": "Longus Capitis",
         "action": "flexes the atlanto-occipital joint, and draws the neck downward.",
-        "path": ""
+        "path": "m1700.2 642.39a57.859 45.991 0 0 1-57.859 45.991 57.859 45.991 0 0 1-57.859-45.991 57.859 45.991 0 0 1 57.859-45.991 57.859 45.991 0 0 1 57.859 45.991z"
       },
       {
         "id": "207",
         "bodyName": "Scalenus (Primae Costae)",
         "action": "bilateral: draws the neck downward \n unilateral: bends neck sideward.",
-        "path": ""
+        "path": "m1890.1 814.48a51.925 43.024 0 0 1-51.925 43.024 51.925 43.024 0 0 1-51.925-43.024 51.925 43.024 0 0 1 51.925-43.024 51.925 43.024 0 0 1 51.925 43.024z"
       },
       {
         "id": "208",
         "bodyName": "Rotatores Brevis",
         "action": "bilateral: to fix vertebrae \n unilateral: rotation around longitudinal axis.",
-        "path": ""
+        "path": "m1937.5 853.05a48.958 43.024 0 0 1-48.958 43.024 48.958 43.024 0 0 1-48.958-43.024 48.958 43.024 0 0 1 48.958-43.024 48.958 43.024 0 0 1 48.958 43.024z"
       },
       {
         "id": "209",
         "bodyName": "Rotatores Longi",
         "action": "bilateral: to fix vertebrae \n unilateral: rotation around longitudinal axis.",
-        "path": ""
+        "path": "m2029.5 882.73a54.892 43.024 0 0 1-54.892 43.024 54.892 43.024 0 0 1-54.892-43.024 54.892 43.024 0 0 1 54.892-43.024 54.892 43.024 0 0 1 54.892 43.024z"
       },
       {
         "id": "210",
         "bodyName": "Levatores Costarum",
         "action": "inspiration.",
-        "path": ""
+        "path": "m2397.5 919.82a51.925 44.507 0 0 1-51.925 44.507 51.925 44.507 0 0 1-51.925-44.507 51.925 44.507 0 0 1 51.925-44.507 51.925 44.507 0 0 1 51.925 44.507z"
       },
       {
         "id": "211",
         "bodyName": "Intercostalis Externi",
         "action": "inspiration, action increases transverse diameter of ribcage.",
-        "path": ""
+        "path": "m2320.3 2008.8a57.859 41.54 0 0 1-57.859 41.54 57.859 41.54 0 0 1-57.859-41.54 57.859 41.54 0 0 1 57.859-41.54 57.859 41.54 0 0 1 57.859 41.54z"
       },
       {
         "id": "212",
         "bodyName": "Obliquus Abdominus Internus",
         "action": "flexes vertebrae, compresses and supports the abdominal viscera.",
-        "path": ""
+        "path": "m3065.1 1701.7a68.244 48.958 0 0 1-68.244 48.958 68.244 48.958 0 0 1-68.244-48.958 68.244 48.958 0 0 1 68.244-48.958 68.244 48.958 0 0 1 68.244 48.958z"
       },
       {
         "id": "213",
         "bodyName": "Sacrococcygeus Ventralis Medialis",
         "action": "with Sacrococcygeus Ventralis Lateralis, flexes tail with occasional lateral movement.",
-        "path": ""
+        "path": "m3845.4 1422.7a65.277 54.892 0 0 1-65.277 54.892 65.277 54.892 0 0 1-65.277-54.892 65.277 54.892 0 0 1 65.277-54.892 65.277 54.892 0 0 1 65.277 54.892z"
       }
     ]
   }

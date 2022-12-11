@@ -6,73 +6,73 @@
         "id": "301",
         "bodyName": "Frontalis",
         "action": "to raise ears to midline.",
-        "path": ""
+        "path": "m922.03 246.69a49.626 35.241 0 0 1-49.626 35.241 49.626 35.241 0 0 1-49.626-35.241 49.626 35.241 0 0 1 49.626-35.241 49.626 35.241 0 0 1 49.626 35.241z"
       },
       {
         "id": "302",
         "bodyName": "Zygomaticoauricularis",
         "action": "to raise ear up and forward.",
-        "path": ""
+        "path": "m981.01 212.17a48.187 30.926 0 0 1-48.187 30.926 48.187 30.926 0 0 1-48.187-30.926 48.187 30.926 0 0 1 48.187-30.926 48.187 30.926 0 0 1 48.187 30.926z"
       },
       {
         "id": "303",
         "bodyName": "Scutulum",
         "action": "cartilaginous support of ear.",
-        "path": ""
+        "path": "m1274.4 215.76a47.468 41.714 0 0 1-47.468 41.714 47.468 41.714 0 0 1-47.468-41.714 47.468 41.714 0 0 1 47.468-41.714 47.468 41.714 0 0 1 47.468 41.714z"
       },
       {
         "id": "304",
         "bodyName": "Cervicouricularis Profundus Major",
         "action": "turns ears back.",
-        "path": ""
+        "path": "m1327.7 261.79a53.222 34.522 0 0 1-53.222 34.522 53.222 34.522 0 0 1-53.222-34.522 53.222 34.522 0 0 1 53.222-34.522 53.222 34.522 0 0 1 53.222 34.522z"
       },
       {
         "id": "305",
         "bodyName": "Depressor Auriculae",
         "action": "lowers ears.",
-        "path": ""
+        "path": "m1027 990.36a50.345 35.241 0 0 1-50.345 35.242 50.345 35.241 0 0 1-50.345-35.242 50.345 35.241 0 0 1 50.345-35.241 50.345 35.241 0 0 1 50.345 35.241z"
       },
       {
         "id": "306",
         "bodyName": "Scalenus Supracostalis",
         "action": "bilateral: draws neck down. \n unilateral: lateral flexion of the neck.",
-        "path": ""
+        "path": "m1211.2 1248.6a60.414 30.207 0 0 1-60.414 30.207 60.414 30.207 0 0 1-60.414-30.207 60.414 30.207 0 0 1 60.414-30.207 60.414 30.207 0 0 1 60.414 30.207z"
       },
       {
         "id": "307",
         "bodyName": "Multifidus Cervicis",
         "action": "bilateral: to fix vertebral column.\n unilateral: lateral flexion of the neck.",
-        "path": ""
+        "path": "m1710.3 693.32a50.345 35.961 0 0 1-50.345 35.961 50.345 35.961 0 0 1-50.345-35.961 50.345 35.961 0 0 1 50.345-35.961 50.345 35.961 0 0 1 50.345 35.961z"
       },
       {
         "id": "308",
         "bodyName": "Multifidus Thoracis",
         "action": "bilateral: to fix vertebral column. \n unilateral: lateral flexion of thoracic vertebrae.",
-        "path": ""
+        "path": "m2164.8 876a57.537 40.276 0 0 1-57.537 40.276 57.537 40.276 0 0 1-57.537-40.276 57.537 40.276 0 0 1 57.537-40.276 57.537 40.276 0 0 1 57.537 40.276z"
       },
       {
         "id": "309",
         "bodyName": "Multifidus Lumborum",
         "action": "bilateral: to fix vertebral column. \n unilateral: lateral flexion of thoracic vertebrae.",
-        "path": ""
+        "path": "m2559 934.26a52.503 39.557 0 0 1-52.503 39.557 52.503 39.557 0 0 1-52.503-39.557 52.503 39.557 0 0 1 52.503-39.557 52.503 39.557 0 0 1 52.503 39.557z"
       },
       {
         "id": "310",
         "bodyName": "Sacrococcygeus Dorsalis Medialis",
         "action": "extends the tail; possibly lateral flexion of the tail.",
-        "path": ""
+        "path": "m3679.5 1186.7a42.434 34.522 0 0 1-42.434 34.522 42.434 34.522 0 0 1-42.434-34.522 42.434 34.522 0 0 1 42.434-34.522 42.434 34.522 0 0 1 42.434 34.522z"
       },
       {
         "id": "311",
         "bodyName": "Rectus Abdominus",
         "action": "flexes back, brings the pelvis forward - expiration - parturition, etc.",
-        "path": ""
+        "path": "m2758.9 1743.4a39.557 34.522 0 0 1-39.557 34.522 39.557 34.522 0 0 1-39.557-34.522 39.557 34.522 0 0 1 39.557-34.522 39.557 34.522 0 0 1 39.557 34.522z"
       },
       {
         "id": "312",
         "bodyName": "Linea Alba",
         "action": "white line joining abdominal muscles.",
-        "path": ""
+        "path": "m2694.2 1792.3a42.434 34.522 0 0 1-42.434 34.522 42.434 34.522 0 0 1-42.434-34.522 42.434 34.522 0 0 1 42.434-34.522 42.434 34.522 0 0 1 42.434 34.522z"
       }
     ]
   }
