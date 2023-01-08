@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StartingPic } from "./images/imageImport";
+import startingpic from "./images/startingpic.png";
 import "./App.css";
 import { ButtonImageContainer } from "./images/ButtonImageContainer";
 
@@ -26,7 +26,7 @@ class ImagePanel extends Component {
             // width="4204"
             // height="3294"
             preserveAspectRatio="none"
-            xlinkHref={StartingPic}
+            xlinkHref={startingpic}
           />
           {currentMode == "layer"
             ? [
@@ -35,7 +35,9 @@ class ImagePanel extends Component {
                     key={index.toString()}
                     src={
                       buttonSelectedState[index]
-                        ? ButtonImageContainer[index].imageName
+                        ? console.log(
+                            ButtonImageContainer[index].imageName.toString()
+                          )
                         : undefined
                     }
                     className="opacity-50 img layered-img"

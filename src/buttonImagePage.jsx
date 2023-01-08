@@ -3,6 +3,7 @@ import ButtonPanel from "./ButtonPanel";
 import { ButtonImageContainer } from "./images/ButtonImageContainer";
 import ImagePanel from "./ImagePanel";
 import TextPanel from "./TextPanel";
+import { NavDropdown, Navbar, Nav, Container } from "react-bootstrap";
 
 class ButtonImagePage extends Component {
   state = {
@@ -90,7 +91,8 @@ class ButtonImagePage extends Component {
    *      the text panel's text fields.
    * **/
   handleButtonClick = (event) => {
-    const selectedButtonIndex = Number.parseInt(event.target.value, 10);
+    // console.log(event);
+    const selectedButtonIndex = event;
     const currentMode = this.state.currentMode;
     if (currentMode == "section") {
       this.setSectionModeButtonClickState(selectedButtonIndex);
@@ -127,7 +129,76 @@ class ButtonImagePage extends Component {
             Please click on the buttons to display parts of the dog anatomy.{" "}
           </strong>
         </p>
-        <button onClick={window.print} className="btn btn-primary">
+
+        <Navbar bg="light" expand="lg">
+          <Container>
+            <Navbar.Brand href="#home" className="me-3">
+              React-Bootstrap
+            </Navbar.Brand>
+            <NavDropdown
+              title="Muscles"
+              id="basic-nav-dropdown"
+              className="me-3"
+              onSelect={this.handleButtonClick}
+            >
+              <NavDropdown.Item href="#action/3.1" eventKey={"0"}>
+                100s
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2" eventKey={"1"}>
+                200s
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" eventKey={"2"}>
+                300s
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" eventKey={"3"}>
+                400s
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" eventKey={"4"}>
+                500s
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" eventKey={"5"}>
+                600s
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <NavDropdown
+              title="Forelimb/Hindlimb Medial"
+              id="basic-nav-dropdown"
+              className="me-3"
+              onSelect={this.handleButtonClick}
+            >
+              <NavDropdown.Item href="#action/3.2" eventKey={"6"}>
+                Superficial Layer
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" eventKey={"7"}>
+                Deep Layer
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown
+              title="Forelimb/Hindlimb Lateral"
+              id="basic-nav-dropdown"
+              className="me-3"
+              onSelect={this.handleButtonClick}
+            >
+              <NavDropdown.Item href="#action/3.2" eventKey={"8"}>
+                Deep Layer
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" eventKey={"9"}>
+                Middle Layer
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4" eventKey={"10"}>
+                Superficial Layer
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="#home">About the Author</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <button onClick={window.print} className="btn btn-info">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -142,13 +213,12 @@ class ButtonImagePage extends Component {
           Print
         </button>
 
-        <button onClick={this.onSectionMode}>Section Mode</button>
-        <button onClick={this.onLayerMode}>Layered Mode</button>
-
-        <ButtonPanel
-          buttonNameArray={ButtonImageContainer}
-          handleButtons={this.handleButtonClick}
-        ></ButtonPanel>
+        <button onClick={this.onSectionMode} className="btn btn-info">
+          Section Mode
+        </button>
+        <button onClick={this.onLayerMode} className="btn btn-info">
+          Layered Mode
+        </button>
 
         <ImagePanel
           mostRecentContainer={this.state.mostRecentContainer}
