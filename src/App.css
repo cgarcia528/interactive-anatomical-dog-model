@@ -44,4 +44,12 @@
 
 .full-group {
   fill-opacity: 0;
+  stroke: black;
+  stroke-width: 8px;
+}
+
+.text-fill {
+  min-height: 100px;
+  width: 300px;
+  overflow: hidden;
 }
