@@ -4,17 +4,18 @@ import { ButtonImageContainer } from "./images/ButtonImageContainer";
 import ImagePanel from "./ImagePanel";
 import TextPanel from "./TextPanel";
 import { NavDropdown, Navbar, Nav, Container } from "react-bootstrap";
+import styled from "styled-components";
 
+const PrinterButton = styled.button`
+  background-color: "#f8f9fa";
+  border: "2px solid #000000";
+`;
 class ButtonImagePage extends Component {
   state = {
     // The following section is beginnig values for section mode
-    currentMode: "section",
     mostRecentButton: 0,
     mostRecentContainer: ButtonImageContainer[0],
     panelDisplay: null,
-    // The following section is beginning values for layer mode
-    buttonSelectedState: Array(ButtonImageContainer.length).fill(false),
-    mostRecentButton: null,
   };
 
   /**
@@ -93,17 +94,11 @@ class ButtonImagePage extends Component {
   handleButtonClick = (event) => {
     // console.log(event);
     const selectedButtonIndex = event;
-    const currentMode = this.state.currentMode;
-    if (currentMode == "section") {
-      this.setSectionModeButtonClickState(selectedButtonIndex);
-    } else if (currentMode == "layer") {
-      this.setLayerModeButtonClickState(selectedButtonIndex);
-    }
+    this.setSectionModeButtonClickState(selectedButtonIndex);
   };
 
   onSectionMode = () => {
     let newState = Object.assign({}, this.state);
-    newState.currentMode = "section";
     newState.mostRecentButton = 0;
     newState.mostRecentContainer = ButtonImageContainer[0];
     newState.panelDisplay = null;
@@ -188,7 +183,7 @@ class ButtonImagePage extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <button
+        <PrinterButton
           onClick={window.print}
           className="btn btn-info"
           style={{
@@ -208,12 +203,11 @@ class ButtonImagePage extends Component {
             <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
           </svg>{" "}
           Print
-        </button>
+        </PrinterButton>
 
         <ImagePanel
           mostRecentContainer={this.state.mostRecentContainer}
           buttonSelectedState={this.state.buttonSelectedState}
-          currentMode={this.state.currentMode}
           onEnter={this.onHover}
           onLeave={this.onLeave}
         ></ImagePanel>
