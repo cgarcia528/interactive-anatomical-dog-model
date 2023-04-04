@@ -101,16 +101,6 @@ class ButtonImagePage extends Component {
     }
   };
 
-  onLayerMode = () => {
-    let newState = Object.assign({}, this.state);
-    newState.currentMode = "layer";
-    newState.buttonSelectedState = Array(ButtonImageContainer.length).fill(
-      false
-    );
-    newState.mostRecentButton = null;
-    this.setState(newState);
-  };
-
   onSectionMode = () => {
     let newState = Object.assign({}, this.state);
     newState.currentMode = "section";
@@ -198,7 +188,14 @@ class ButtonImagePage extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <button onClick={window.print} className="btn btn-info">
+        <button
+          onClick={window.print}
+          className="btn btn-info"
+          style={{
+            backgroundColor: "#f8f9fa",
+            border: "2px solid #000000",
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -211,13 +208,6 @@ class ButtonImagePage extends Component {
             <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
           </svg>{" "}
           Print
-        </button>
-
-        <button onClick={this.onSectionMode} className="btn btn-info">
-          Section Mode
-        </button>
-        <button onClick={this.onLayerMode} className="btn btn-info">
-          Layered Mode
         </button>
 
         <ImagePanel
