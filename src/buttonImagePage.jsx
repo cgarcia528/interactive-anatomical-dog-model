@@ -19,6 +19,8 @@ const PageTitle = styled.p`
   width: 50%;
 `;
 
+// this.audio = new Audio("/hover.mp3");
+
 class ButtonImagePage extends Component {
   state = {
     // The following section is beginnig values for section mode
@@ -35,6 +37,7 @@ class ButtonImagePage extends Component {
    *      text information for the text panel and sets it as a state variable.
    * **/
   onHover = (e) => {
+    this.audio.play();
     const mostRecentContainerText = this.state.mostRecentContainer.textField;
     const found = mostRecentContainerText[0].array.find((element) => {
       return element.id === e.target.id;
