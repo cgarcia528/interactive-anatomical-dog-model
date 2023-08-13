@@ -18,7 +18,7 @@
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://clarissa-garcia.github.io/",
+  "homepage": "https://clarissa-garcia.github.io/dog-model",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
