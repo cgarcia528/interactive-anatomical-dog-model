@@ -7,15 +7,21 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-preset-expo": "^9.5.1",
     "bootstrap": "^5.2.3",
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.63.4",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://clarissa-garcia.github.io/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,5 +44,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.22.5"
   }
 }

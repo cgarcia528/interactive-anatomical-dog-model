@@ -53,3 +53,115 @@
   width: 300px;
   overflow: hidden;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+}
+
+.gallery__img {
+  width: 90%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.container {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 0 5%;
+
+  /** Alternative Syntax **/
+  /* grid-column: 3 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery__item--3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+}
+
+.gallery__item--4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4;  */
+  /* grid-row: 3 / span 3; */
+}
+
+.gallery__item--5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+.gallery__item--6 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+/** Alternative Syntax **/
+/* grid-column: 5 / span 4; */
+/* grid-row: 6 / span 3; */
+.gallery__item--7 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+.gallery__item--8 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+.education-info {
+  border: 1px solid black;
+  grid-area: education-info;
+}
+/**https://codepen.io/hrtzt/pen/pgXMYb*/
+p {
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: justify;
+  /* text-align-last: right; */
+  /* text-indent: 22px; */
+}
+
+/** i like this grid organization example: https://codepen.io/anon/pen/GGZPPy?editors=1100 */

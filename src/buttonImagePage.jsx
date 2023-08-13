@@ -37,7 +37,7 @@ class ButtonImagePage extends Component {
    *      text information for the text panel and sets it as a state variable.
    * **/
   onHover = (e) => {
-    this.audio.play();
+    // this.audio.play();
     const mostRecentContainerText = this.state.mostRecentContainer.textField;
     const found = mostRecentContainerText[0].array.find((element) => {
       return element.id === e.target.id;

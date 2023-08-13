@@ -1,27 +1,27 @@
 import "./App.css";
 import React from "react";
-import Author from './pages/Author'
-import Home from './pages/Home'
+import Author from "./pages/Author";
+import Home from "./pages/Home";
 import ButtonImagePage from "./buttonImagePage";
 
 function App() {
   let Component;
-  switch(window.location.pathname){
+  console.log("window.location.pathname is " + window.location.pathname);
+  switch (window.location.pathname) {
     case "/":
-      Component = <Home/>;
+      console.log("case /");
+      Component = <Home />;
       break;
-      case "/author":
-        Component = <Author/>;
+    case "/author":
+      console.log("case /author");
+      Component = <Author />;
       break;
-      case "/home":
-        Component = <Home/>;
+    case "/home":
+      console.log("case /home");
+      Component = <Home />;
       break;
   }
-  return (
-    <div className="App">
-      {Component}
-    </div>
-  );
+  return <div className="App">{Component}</div>;
 }
 
 export default App;
