@@ -39,22 +39,17 @@ export default function Author() {
             />
           </figure>
           <div className="gallery__item--2">
-            <p>
-              {" "}
-              Using observation and measurement by means of the “Record of
-              Characteristics” (ROC) and associated database, Casey transformed
-              the breeding of better dogs from an art to a science.{" "}
-            </p>
-            <p>
-              A mentor to many, she invited her students to learn through the
-              course “Purebred Dogs” and through spirited discussions.{" "}
-            </p>
-            <p>
-              Her legacy can be found internationally in improved breed
-              standards, books such as Dogs: an Atlas of Kinetic Anatomy,
-              continuing education of judges & breeders, and above all, in dogs
-              with balanced, properly structured gait.
-            </p>
+            {" "}
+            Using observation and measurement by means of the “Record of
+            Characteristics” (ROC) and associated database, Casey transformed
+            the breeding of better dogs from an art to a science. <br /> <br />{" "}
+            A mentor to many, she invited her students to learn through the
+            course “Purebred Dogs” and through spirited discussions. <br />{" "}
+            <br />
+            Her legacy can be found internationally in improved breed standards,
+            books such as Dogs: an Atlas of Kinetic Anatomy, continuing
+            education of judges & breeders, and above all, in dogs with
+            balanced, properly structured gait.
           </div>
 
           <figure className="gallery__item gallery__item--3">
@@ -89,12 +84,10 @@ export default function Author() {
           </figure>
 
           <div className="gallery__item--8">
-            <p>
-              The Kerry Blue Terrier Club of Canada is proud to recognize the
-              many accomplishments of Casey Gardiner, including her extensive
-              show record with her “Kerrycroft” Kerries and for her unique and
-              pioneering work in canine structure and movement.
-            </p>
+            The Kerry Blue Terrier Club of Canada is proud to recognize the many
+            accomplishments of Casey Gardiner, including her extensive show
+            record with her “Kerrycroft” Kerries and for her unique and
+            pioneering work in canine structure and movement.
           </div>
 
           <figure className="gallery__item gallery__item--9">
@@ -104,14 +97,6 @@ export default function Author() {
               alt="Word Doc Katie Specs"
             />
           </figure>
-
-          {/* <figure className="gallery__item gallery__item--6">
-            <img
-              src={photo_of_bc_show}
-              className="gallery__img"
-              alt="Photo of BC Show"
-            />
-          </figure> */}
         </div>
       </div>
     </React.Fragment>
