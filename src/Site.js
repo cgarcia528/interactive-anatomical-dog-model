@@ -7,6 +7,7 @@ import ButtonImagePage from "./buttonImagePage";
 function App() {
   let Component;
   console.log("window.location.pathname is " + window.location.pathname);
+  Component = <Home />;
   switch (window.location.pathname) {
     case "/":
       console.log("case /");

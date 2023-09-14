@@ -88,7 +88,16 @@ export default function Author() {
             <img src={plaqueCropped} className="gallery__img" alt="Plaque" />
           </figure>
 
-          <figure className="gallery__item gallery__item--8">
+          <div className="gallery__item--8">
+            <p>
+              The Kerry Blue Terrier Club of Canada is proud to recognize the
+              many accomplishments of Casey Gardiner, including her extensive
+              show record with her “Kerrycroft” Kerries and for her unique and
+              pioneering work in canine structure and movement.
+            </p>
+          </div>
+
+          <figure className="gallery__item gallery__item--9">
             <img
               src={photo_of_bc_show}
               className="gallery__img"
