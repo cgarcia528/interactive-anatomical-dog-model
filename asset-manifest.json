@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dog-model/static/css/main.57cfe8eb.css",
-    "main.js": "/dog-model/static/js/main.b97f59be.js",
+    "main.css": "/dog-model/static/css/main.51c65dc0.css",
+    "main.js": "/dog-model/static/js/main.00f1ac48.js",
     "static/js/787.4351e7fe.chunk.js": "/dog-model/static/js/787.4351e7fe.chunk.js",
     "static/media/layer1.png": "/dog-model/static/media/layer1.e160b876b853f8ebafdb.png",
     "static/media/layer11.png": "/dog-model/static/media/layer11.d4449282cb67c9e3dafd.png",
+    "static/media/book_cover.PNG": "/dog-model/static/media/book_cover.ac50bc45ac6b9fdb74a7.PNG",
     "static/media/layer5.png": "/dog-model/static/media/layer5.b4f4726310949a218479.png",
     "static/media/layer7.png": "/dog-model/static/media/layer7.4eadfb0cd04de40be33a.png",
-    "static/media/book_cover.jpg": "/dog-model/static/media/book_cover.741424ba7f9011482fae.jpg",
     "static/media/layer2.png": "/dog-model/static/media/layer2.23a9e0dee51cdee29768.png",
     "static/media/layer10.png": "/dog-model/static/media/layer10.8ba2707f1324581a37c4.png",
     "static/media/layer9.png": "/dog-model/static/media/layer9.414dbb4a7a4365ecb3d1.png",
@@ -23,14 +23,14 @@
     "static/media/skeleton_left.jpg": "/dog-model/static/media/skeleton_left.1102b34418906106860d.jpg",
     "static/media/skeleton_right.jpg": "/dog-model/static/media/skeleton_right.d33dd95f4686c3a88ab1.jpg",
     "static/media/four_kerries_no_frame.jpg": "/dog-model/static/media/four_kerries_no_frame.99d1758afa1f61f2c810.jpg",
+    "static/media/backarrow.svg": "/dog-model/static/media/backarrow.ed06fde68d649b14897f9d5df949ae00.svg",
     "index.html": "/dog-model/index.html",
-    "static/media/printer.svg": "/dog-model/static/media/printer.3e47b7cbf393142e8830f777891e1c18.svg",
-    "main.57cfe8eb.css.map": "/dog-model/static/css/main.57cfe8eb.css.map",
-    "main.b97f59be.js.map": "/dog-model/static/js/main.b97f59be.js.map",
+    "main.51c65dc0.css.map": "/dog-model/static/css/main.51c65dc0.css.map",
+    "main.00f1ac48.js.map": "/dog-model/static/js/main.00f1ac48.js.map",
     "787.4351e7fe.chunk.js.map": "/dog-model/static/js/787.4351e7fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57cfe8eb.css",
-    "static/js/main.b97f59be.js"
+    "static/css/main.51c65dc0.css",
+    "static/js/main.00f1ac48.js"
   ]
 }
