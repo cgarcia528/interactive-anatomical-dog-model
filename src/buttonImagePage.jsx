@@ -3,7 +3,6 @@ import { ButtonImageContainer } from "./images/ButtonImageContainer";
 import ImagePanel from "./ImagePanel";
 import TextPanel from "./TextPanel";
 import styled from "styled-components";
-import PrinterSVG from "./images/printer.svg";
 import NavigationBar from "./NavigationBar";
 
 const PrinterButton = styled.button`
@@ -93,15 +92,6 @@ class ButtonImagePage extends Component {
     return (
       <div>
         <NavigationBar handler={this.triggerReset.bind(this)} />
-
-        {/* <button
-          href="#"
-          className="actionButton printButton"
-          onClick={window.print}
-        >
-          <img src={PrinterSVG} alt="Printer Icon" />
-          Print
-        </button> */}
 
         <ImagePanel
           mostRecentContainer={this.state.mostRecentContainer}
