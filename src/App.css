@@ -22,6 +22,40 @@
   justify-content: center;
 }
 
+.actionButton {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.backButton {
+  position: relative;
+  left: 0rem;
+  top: -4rem;
+}
+
+.printButton:hover {
+  background: rgba(31, 48, 240, 255);
+  position: absolute;
+  color: white;
+  top: 7rem;
+  left: 8%;
+}
+.actionButton:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif !important;
 }
@@ -58,7 +92,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-gap: 15px;
+  /* grid-gap: 15px; */
 }
 
 .gallery__img {
@@ -161,6 +195,10 @@
   border: 1px solid black;
   grid-area: education-info;
 }
+
+.navBar {
+  background-color: rgb(95, 95, 95);
+}
 /**https://codepen.io/hrtzt/pen/pgXMYb*/
 p {
   line-height: 1;
@@ -170,5 +208,116 @@ p {
   /* text-align-last: right; */
   /* text-indent: 22px; */
 }
+
+.authorNavOption {
+  background-color: rgba(31, 48, 240, 255);
+  border-radius: 25px;
+  color: rgb(227, 227, 227) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  div {
+    font-size: calc(0.5em + 0.4vw);
+  }
+}
+
+.test {
+  justify-content: center;
+}
+
+#bootstrap-overrides {
+  justify-content: center;
+}
+
+#panel-color {
+  background-color: rgba(31, 48, 240, 255);
+
+  /* color: black; */
+}
+
+.authorItalics {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  div {
+    font-size: 13px;
+  }
+  .backButton {
+    top: -1rem;
+  }
+  .authorNavOption {
+    width: 115px;
+    text-align: center;
+  }
+  .image-container svg {
+    width: 90%;
+  }
+  .centeringPanel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1101px) {
+  .centeringPanel {
+    left: 70%;
+    position: absolute;
+    top: 10%;
+  }
+  .authorNavOption {
+    width: 139px;
+  }
+  .image-container svg {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .gallery {
+    display: inline-table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gallery__item--2 {
+    font-size: 15px;
+  }
+  .gallery__item--3 {
+    display: none;
+  }
+  .gallery__item--4 {
+    display: none;
+  }
+  .gallery__item--5 {
+    display: none;
+  }
+  .gallery__item--6 {
+    display: none;
+  }
+  .gallery__item--8 {
+    font-size: 15px;
+  }
+}
+
+/* @media only screen and (max-width: 1000px) {
+  div {
+    font-size: 13px;
+  }
+  .backButton {
+    top: -1rem;
+  }
+  .authorNavOption {
+    width: 115px;
+    text-align: center;
+  }
+  .image-container svg {
+    width: 90%;
+  }
+  .centeringPanel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+} */
 
 /** i like this grid organization example: https://codepen.io/anon/pen/GGZPPy?editors=1100 */

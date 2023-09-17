@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { NavDropdown, Navbar, Nav, Container } from "react-bootstrap";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import styled from "styled-components";
+
+const StyledContainer = styled(Container)`
+  color: #e3e3e3;
+  justify-content: !important center;
+`;
 
 class NavigationBar extends Component {
   /**
@@ -17,10 +26,10 @@ class NavigationBar extends Component {
 
   render() {
     return (
-      <Navbar bg="light" expand="lg">
-        <Container>
+      <Navbar className="navBar test" expand="lg">
+        <StyledContainer id="bootstrap-overrides">
           <Navbar.Brand href="#home" className="me-3">
-            React-Bootstrap
+            <i>Dogs: an Atlas of Kinetic Anatomy</i> Virtual Demo
           </Navbar.Brand>
           <NavDropdown
             title="Muscles"
@@ -77,13 +86,15 @@ class NavigationBar extends Component {
               Superficial Layer
             </NavDropdown.Item>
           </NavDropdown>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/author">About the Author</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
+          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+          {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+          <Nav className="authorNavOption">
+            <Nav.Link className="authorNavOption" href="/author">
+              About the Author
+            </Nav.Link>
+          </Nav>
+          {/* </Navbar.Collapse> */}
+        </StyledContainer>
       </Navbar>
     );
   }

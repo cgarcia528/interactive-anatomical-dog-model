@@ -15,8 +15,7 @@ const PrinterButton = styled.button`
 const PageTitle = styled.p`
   font-size: 18px;
   font-weight: bold;
-  margin: auto;
-  width: 50%;
+  text-align: center;
 `;
 
 // this.audio = new Audio("/hover.mp3");
@@ -93,16 +92,16 @@ class ButtonImagePage extends Component {
   render() {
     return (
       <div>
-        <PageTitle className="pTitle p1">
-          Please click on the buttons to display parts of the dog anatomy.
-        </PageTitle>
-
         <NavigationBar handler={this.triggerReset.bind(this)} />
 
-        <PrinterButton onClick={window.print} className="btn">
+        {/* <button
+          href="#"
+          className="actionButton printButton"
+          onClick={window.print}
+        >
           <img src={PrinterSVG} alt="Printer Icon" />
           Print
-        </PrinterButton>
+        </button> */}
 
         <ImagePanel
           mostRecentContainer={this.state.mostRecentContainer}

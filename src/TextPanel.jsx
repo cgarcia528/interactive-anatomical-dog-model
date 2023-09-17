@@ -1,16 +1,20 @@
 import React, { Component } from "react";
+import "./App.css";
 
+const fallback =
+  "Please hover over the image to learn more about the canine anatomy functions";
 class TextPanel extends Component {
   render() {
     const { panelDisplayInfo, mostRecentContainer } = this.props;
-    if (panelDisplayInfo) {
-      return (
-        <div className="me-5 mt-5 card bg-primary text-light position-absolute top-0 end-0 text-fill">
+    return (
+      <div className="centeringPanel">
+        <div
+          className="card bg-primary text-light position-absolute text-fill"
+          id="screenSize"
+        >
           <div className="card-body">
             <h5 className="card-title">
-              {panelDisplayInfo != null
-                ? panelDisplayInfo.bodyName
-                : mostRecentContainer.textField[0].fallbackText}
+              {panelDisplayInfo != null ? panelDisplayInfo.bodyName : fallback}
             </h5>
             <h6 className="card-subtitle mb-2 text-light">
               {panelDisplayInfo != null
@@ -24,8 +28,8 @@ class TextPanel extends Component {
             </p>
           </div>
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
 export default TextPanel;
