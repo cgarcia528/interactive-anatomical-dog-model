@@ -34,8 +34,7 @@ class ButtonImagePage extends Component {
    *      The function loops through all the svg objects in the json to find the correct one with all the
    *      text information for the text panel and sets it as a state variable.
    * **/
-  onHover = (e) => {
-    // this.audio.play();
+  onHover = (e, touchScreen) => {
     const mostRecentContainerText = this.state.mostRecentContainer.textField;
     const found = mostRecentContainerText[0].array.find((element) => {
       return element.id === e.target.id;

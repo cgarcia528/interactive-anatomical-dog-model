@@ -2,27 +2,33 @@ import "./App.css";
 import React from "react";
 import Author from "./pages/Author";
 import Home from "./pages/Home";
-import ButtonImagePage from "./buttonImagePage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   let Component;
-  console.log("window.location.pathname is " + window.location.pathname);
-  Component = <Home />;
+  const link = window.location.pathname;
+  Component = null;
   switch (window.location.pathname) {
     case "/":
-      console.log("case /");
+    case "/dog-model/":
+    case "/home":
       Component = <Home />;
       break;
     case "/author":
-      console.log("case /author");
       Component = <Author />;
       break;
-    case "/home":
-      console.log("case /home");
+    default:
+      console.log("couldnt find page for " + link);
       Component = <Home />;
-      break;
   }
-  return <div className="App">{Component}</div>;
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/author" element={<Author />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

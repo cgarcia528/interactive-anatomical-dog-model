@@ -1,11 +1,25 @@
 import React, { Component } from "react";
 import startingpic from "./images/startingpic.png";
 import "./App.css";
-import { ButtonImageContainer } from "./images/ButtonImageContainer";
 
 class ImagePanel extends Component {
+  /**
+   * Name: onClick
+   * Use: Handles devices with touchscreen input. It simulates the normal hover function used for
+   *      non-touch screen devices and simulates the onLeave (exiting hover) function after a timeout.
+   * **/
+  onClick = (e, touchScreen, onEnter, onLeave) => {
+    if (touchScreen) {
+      onEnter(e);
+      setTimeout(function () {
+        onLeave();
+      }, 5000);
+    }
+  };
   render() {
     const { mostRecentContainer, onEnter, onLeave } = this.props;
+    const touchScreen = window.ontouchstart !== undefined;
+
     return (
       <div className="image-container">
         <svg
@@ -22,7 +36,6 @@ class ImagePanel extends Component {
             xlinkHref={startingpic}
           />
           <g>
-            {/*We should only render svg hotspot areas and a single image if the current mode is section mode*/}
             <image
               key={"section_active_image"}
               className="img layered-img"
@@ -36,8 +49,11 @@ class ImagePanel extends Component {
                   id={el.id}
                   key={el.id}
                   d={el.path}
-                  onMouseEnter={(e) => onEnter(e)}
+                  onMouseEnter={(e) => onEnter(e, null)}
                   onMouseLeave={onLeave}
+                  onClick={(e) =>
+                    this.onClick(e, touchScreen, onEnter, onLeave)
+                  }
                 />
               </g>
             ))}

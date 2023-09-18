@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledContainer = styled(Container)`
   color: #e3e3e3;
@@ -28,7 +29,7 @@ class NavigationBar extends Component {
     return (
       <Navbar className="navBar test" expand="lg">
         <StyledContainer id="bootstrap-overrides">
-          <Navbar.Brand href="#home" className="me-3">
+          <Navbar.Brand className="me-3" id="title">
             <i>Dogs: an Atlas of Kinetic Anatomy</i> Virtual Demo
           </Navbar.Brand>
           <NavDropdown
@@ -37,24 +38,12 @@ class NavigationBar extends Component {
             className="me-3"
             onSelect={this.handleButtonClick}
           >
-            <NavDropdown.Item href="#action/3.1" eventKey={"0"}>
-              100s
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" eventKey={"1"}>
-              200s
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" eventKey={"2"}>
-              300s
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" eventKey={"3"}>
-              400s
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" eventKey={"4"}>
-              500s
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" eventKey={"5"}>
-              600s
-            </NavDropdown.Item>
+            <NavDropdown.Item eventKey={"0"}>100s</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"1"}>200s</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"2"}>300s</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"3"}>400s</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"4"}>500s</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"5"}>600s</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown
@@ -63,12 +52,10 @@ class NavigationBar extends Component {
             className="me-3"
             onSelect={this.handleButtonClick}
           >
-            <NavDropdown.Item href="#action/3.2" eventKey={"6"}>
+            <NavDropdown.Item eventKey={"6"}>
               Superficial Layer
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" eventKey={"7"}>
-              Deep Layer
-            </NavDropdown.Item>
+            <NavDropdown.Item eventKey={"7"}>Deep Layer</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown
             title="Forelimb/Hindlimb Lateral"
@@ -76,24 +63,17 @@ class NavigationBar extends Component {
             className="me-3"
             onSelect={this.handleButtonClick}
           >
-            <NavDropdown.Item href="#action/3.2" eventKey={"8"}>
-              Deep Layer
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" eventKey={"9"}>
-              Middle Layer
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4" eventKey={"10"}>
+            <NavDropdown.Item eventKey={"8"}>Deep Layer</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"9"}>Middle Layer</NavDropdown.Item>
+            <NavDropdown.Item eventKey={"10"}>
               Superficial Layer
             </NavDropdown.Item>
           </NavDropdown>
-          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-          {/* <Navbar.Collapse id="basic-navbar-nav"> */}
           <Nav className="authorNavOption">
-            <Nav.Link className="authorNavOption" href="/author">
+            <Nav.Link as={Link} to="/author" className="authorNavOption">
               About the Author
             </Nav.Link>
           </Nav>
-          {/* </Navbar.Collapse> */}
         </StyledContainer>
       </Navbar>
     );

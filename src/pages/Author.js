@@ -1,18 +1,14 @@
-import NavigationBar from "../NavigationBar";
 import React from "react";
-import styled from "styled-components";
 import "../../src/App.css";
 import skeletonRight from "../images/skeleton_right.jpg";
 import skeletonLeft from "../images/skeleton_left.jpg";
-import plaque from "../images/plaque.jpg";
 import four_kerries_no_frame from "../images/four_kerries_no_frame.jpg";
 import photo_of_bc_show from "../images/photo_of_bc_show.jpg";
 import litterPhoto from "../images/litter_photo.jpg";
-// import bookCover from "../images/book_cover.jpg";
 import bookCover from "../images/book_cover.PNG";
 import plaqueCropped from "../images/Gardiner_plaque_cropped.jpg";
 import BackArrowSVG from "../images/backarrow.svg";
-// Image Gallery Example https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/
+import { Link } from "react-router-dom";
 
 export default function Author() {
   return (
@@ -25,13 +21,12 @@ export default function Author() {
 
       {/* Picture CSS Grid section */}
       <div className="container">
-        <a
-          href="#"
-          className="actionButton backButton"
-          onClick={() => (window.location = "/home")}
-        >
+        <Link className="actionButton backButton" to="/">
+          {/* <a className="actionButton backButton"> */}
           <img src={BackArrowSVG} alt="ArrowIcon" /> Back
-        </a>
+          {/* </a> */}
+        </Link>
+
         <div className="gallery">
           <figure className="gallery__item gallery__item--1">
             <img
@@ -48,10 +43,6 @@ export default function Author() {
             A mentor to many, she invited her students to learn through the
             course “Purebred Dogs” and through spirited discussions. <br />{" "}
             <br />
-            {/* Her legacy can be found internationally in improved breed standards,
-            books such as Dogs: an Atlas of Kinetic Anatomy, continuing
-            education of judges & breeders, and above all, in dogs with
-            balanced, properly structured gait. */}
           </div>
 
           <figure className="gallery__item gallery__item--3">
@@ -86,10 +77,6 @@ export default function Author() {
           </figure>
 
           <div className="gallery__item--8">
-            {/* Her legacy can be found internationally in improved breed standards,
-            books such as Dogs: an Atlas of Kinetic Anatomy, continuing
-            education of judges & breeders, and above all, in dogs with
-            balanced, properly structured gait.  */}
             The Kerry Blue Terrier Club of Canada is proud to recognize the many
             accomplishments of Casey Gardiner, including her extensive show
             record with her “Kerrycroft” Kerries and for her unique and
