@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dog-model/static/css/main.51c65dc0.css",
-    "main.js": "/dog-model/static/js/main.8492dd76.js",
+    "main.css": "/dog-model/static/css/main.2a34beb9.css",
+    "main.js": "/dog-model/static/js/main.9070333e.js",
     "static/js/787.4351e7fe.chunk.js": "/dog-model/static/js/787.4351e7fe.chunk.js",
     "static/media/layer1.png": "/dog-model/static/media/layer1.e160b876b853f8ebafdb.png",
     "static/media/layer11.png": "/dog-model/static/media/layer11.d4449282cb67c9e3dafd.png",
@@ -25,12 +25,12 @@
     "static/media/four_kerries_no_frame.jpg": "/dog-model/static/media/four_kerries_no_frame.99d1758afa1f61f2c810.jpg",
     "static/media/backarrow.svg": "/dog-model/static/media/backarrow.ed06fde68d649b14897f9d5df949ae00.svg",
     "index.html": "/dog-model/index.html",
-    "main.51c65dc0.css.map": "/dog-model/static/css/main.51c65dc0.css.map",
-    "main.8492dd76.js.map": "/dog-model/static/js/main.8492dd76.js.map",
+    "main.2a34beb9.css.map": "/dog-model/static/css/main.2a34beb9.css.map",
+    "main.9070333e.js.map": "/dog-model/static/js/main.9070333e.js.map",
     "787.4351e7fe.chunk.js.map": "/dog-model/static/js/787.4351e7fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51c65dc0.css",
-    "static/js/main.8492dd76.js"
+    "static/css/main.2a34beb9.css",
+    "static/js/main.9070333e.js"
   ]
 }
