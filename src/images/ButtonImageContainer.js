@@ -1,5 +1,4 @@
-// import images from "../images/imageImport";
-import JsonImport, {
+import {
   EightHundreds,
   FiveHundreds,
   FourHundreds,
@@ -24,15 +23,10 @@ import EightHundredsPic from "./layer8.png";
 import NineHundredsPic from "./layer9.png";
 import OneThousandsPic from "./layer10.png";
 import OneHundredThousandsPic from "./layer11.png";
-import StartingPic from "./startingpic.png";
-
-// import HundredsPic from "./layer1.png";
-// import TwoHundredsPic from "./layer2.png";
 
 export const ButtonImageContainer = [
   {
     buttonName: "Muscles (100s)",
-    // imageName: "../images/layer1.png",
     imageName: HundredsPic,
     textField: Hundreds,
   },
@@ -88,4 +82,4 @@ export const ButtonImageContainer = [
   },
 ];
 
-export default { ButtonImageContainer };
+export default ButtonImageContainer;

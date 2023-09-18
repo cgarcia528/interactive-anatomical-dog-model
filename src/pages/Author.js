@@ -29,11 +29,7 @@ export default function Author() {
 
         <div className="gallery">
           <figure className="gallery__item gallery__item--1">
-            <img
-              src={litterPhoto}
-              className="gallery__img"
-              alt="Litter Photo"
-            />
+            <img src={litterPhoto} className="gallery__img" alt="Dog Litter" />
           </figure>
           <div className="gallery__item--2">
             {" "}
@@ -61,7 +57,7 @@ export default function Author() {
           </figure>
 
           <figure className="gallery__item gallery__item--5">
-            <img src={bookCover} className="gallery__img" alt="Photo of Book" />
+            <img src={bookCover} className="gallery__img" alt="Book Cover" />
           </figure>
 
           <figure className="gallery__item gallery__item--6">

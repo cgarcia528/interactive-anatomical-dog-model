@@ -44,6 +44,10 @@
   top: -4rem;
 }
 
+#screenSize {
+  background-color: rgba(31, 48, 240, 255);
+}
+
 .printButton:hover {
   background: rgba(31, 48, 240, 255);
   position: absolute;
@@ -204,8 +208,6 @@ p {
 
 #panel-color {
   background-color: rgba(31, 48, 240, 255);
-
-  /* color: black; */
 }
 
 .authorItalics {
@@ -238,7 +240,7 @@ p {
   .centeringPanel {
     left: 70%;
     position: absolute;
-    top: 15%;
+    top: 6%;
   }
   .authorNavOption {
     width: 139px;
@@ -259,8 +261,8 @@ p {
     margin-right: auto;
   }
   .gallery__item--2,
-  .gallery-item--8 {
-    font-size: 13px;
+  .gallery__item--8 {
+    font-size: 17px;
   }
   .gallery__item--3,
   .gallery__item--4,
@@ -276,7 +278,7 @@ p {
 
 @media only screen and (min-width: 1200px) {
   .gallery__item--2,
-  .gallery-item--8 {
+  .gallery__item--8 {
     font-size: 20px;
   }
 }
@@ -284,5 +286,13 @@ p {
   .gallery__item--2,
   .gallery__item--8 {
     font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .image-container {
+    width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

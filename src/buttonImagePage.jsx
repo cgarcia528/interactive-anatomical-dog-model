@@ -2,22 +2,7 @@ import React, { Component } from "react";
 import { ButtonImageContainer } from "./images/ButtonImageContainer";
 import ImagePanel from "./ImagePanel";
 import TextPanel from "./TextPanel";
-import styled from "styled-components";
 import NavigationBar from "./NavigationBar";
-
-const PrinterButton = styled.button`
-  background-color: #f8f9fa;
-  color: black;
-  border: 2px solid #000000;
-`;
-
-const PageTitle = styled.p`
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-`;
-
-// this.audio = new Audio("/hover.mp3");
 
 class ButtonImagePage extends Component {
   state = {

@@ -5,22 +5,22 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  let Component;
-  const link = window.location.pathname;
-  Component = null;
-  switch (window.location.pathname) {
-    case "/":
-    case "/dog-model/":
-    case "/home":
-      Component = <Home />;
-      break;
-    case "/author":
-      Component = <Author />;
-      break;
-    default:
-      console.log("couldnt find page for " + link);
-      Component = <Home />;
-  }
+  // let Component;
+  // const link = window.location.pathname;
+  // Component = null;
+  // switch (window.location.pathname) {
+  //   case "/":
+  //   case "/dog-model/":
+  //   case "/home":
+  //     Component = <Home />;
+  //     break;
+  //   case "/author":
+  //     Component = <Author />;
+  //     break;
+  //   default:
+  //     console.log("couldnt find page for " + link);
+  //     Component = <Home />;
+  // }
   return (
     <div>
       <Routes>
